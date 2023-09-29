@@ -1,5 +1,6 @@
-import {React, useCallback, useState} from "react";
+import {React, useCallback, useContext, useState} from "react";
 import SearchInput from "./SearchInput.jsx";
+import {DashboardContext} from "../context/DashboardContext.js";
 
 const usersList = [
     'james',
@@ -9,7 +10,7 @@ const usersList = [
     'chuay'
 ]
 export default function CallbackExample() {
-
+    const user = useContext(DashboardContext)
     const [users, setUsers] = useState(usersList)
     // returns a memoized function which will be considered same on each component re-render when passed as props
     // frozen
@@ -37,6 +38,7 @@ export default function CallbackExample() {
 
     return (
         <div>
+            {user.name}
             <div className="flex flex-row justify-center items-center gap-2">
                 <button onClick={shuffleList}>Shuffle</button>
                 <SearchInput onChange={handleSearch}></SearchInput>

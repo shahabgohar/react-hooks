@@ -1,4 +1,5 @@
-import {React, useMemo, useState} from "react";
+import {React, useContext, useMemo, useState} from "react";
+import {DashboardContext} from "../context/DashboardContext.js";
 
 
 
@@ -14,6 +15,7 @@ const initialItems = new Array(199_999_9).fill(0).map((_,i) => {
  */
 export default function memoExample() {
     console.log('memo ran')
+    const user = useContext(DashboardContext)
     const [count, setCount] = useState(0)
     const [items] = useState(initialItems)
 
@@ -37,6 +39,7 @@ export default function memoExample() {
 
     return (
         <div>
+            <h1>{user.name}</h1>
             <h1>Count: {count}</h1>
             <h1>Selected Item: {selectedItem?.id}</h1>
             <h1>Selected count item: {selectedCountItem?.id}</h1>
