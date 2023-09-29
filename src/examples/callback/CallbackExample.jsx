@@ -1,6 +1,6 @@
 import {React, useCallback, useContext, useState} from "react";
 import SearchInput from "./SearchInput.jsx";
-import {DashboardContext} from "../context/DashboardContext.js";
+import {userContext} from "../context/DashboardContext.js";
 
 const usersList = [
     'james',
@@ -10,7 +10,7 @@ const usersList = [
     'chuay'
 ]
 export default function CallbackExample() {
-    const user = useContext(DashboardContext)
+    const user = userContext()
     const [users, setUsers] = useState(usersList)
     // returns a memoized function which will be considered same on each component re-render when passed as props
     // frozen
