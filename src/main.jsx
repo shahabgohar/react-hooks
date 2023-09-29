@@ -5,12 +5,17 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import MemoExample from "./examples/memo/MemoExample.jsx"
+import CallbackExample from "./examples/callback/CallbackExample.jsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MemoExample />,
     },
+    {
+        path: '/callback-example',
+        element: <CallbackExample />
+    }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
