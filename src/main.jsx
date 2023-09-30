@@ -9,6 +9,7 @@ import CallbackExample from "./examples/callback/CallbackExample.jsx";
 import {DashboardContext} from "./examples/context/DashboardContext.js";
 import RefDemo from "./examples/ref/RefDemo.jsx";
 import ReducerDemo from "./examples/reducer/index.jsx"
+import ImperativeDemo from "./examples/imparativeHandling"
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     {
         path: '/reducer-demo',
         element: <ReducerDemo />
+    },
+    {
+        path: '/imperative-demo',
+        element: <ImperativeDemo />
     }
 ]);
 
