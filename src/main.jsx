@@ -8,6 +8,7 @@ import MemoExample from "./examples/memo/MemoExample.jsx"
 import CallbackExample from "./examples/callback/CallbackExample.jsx";
 import {DashboardContext} from "./examples/context/DashboardContext.js";
 import RefDemo from "./examples/ref/RefDemo.jsx";
+import ReducerDemo from "./examples/reducer/index.jsx"
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     {
         path: '/ref-demo',
         element: <RefDemo />
+    },
+    {
+        path: '/reducer-demo',
+        element: <ReducerDemo />
     }
 ]);
 
