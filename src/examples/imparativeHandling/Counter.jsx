@@ -15,6 +15,7 @@ function Counter(props, ref) {
         setCounter(0)
     }
 
+    // kind of like exposing component method to parent element
     useImperativeHandle(ref, () => ({reset}))
 
     return (
