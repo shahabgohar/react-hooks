@@ -10,6 +10,8 @@ import {DashboardContext} from "./examples/context/DashboardContext.js";
 import RefDemo from "./examples/ref/RefDemo.jsx";
 import ReducerDemo from "./examples/reducer/index.jsx"
 import ImperativeDemo from "./examples/imparativeHandling"
+import Transitions from "./examples/transitions"
+import './index.css'
 
 const router = createBrowserRouter([
     {
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
     {
         path: '/imperative-demo',
         element: <ImperativeDemo />
+    },
+    {
+        path: '/transitions-demo',
+        element: <Transitions/>
     }
 ]);
 
