@@ -11,6 +11,7 @@ import RefDemo from "./examples/ref/RefDemo.jsx";
 import ReducerDemo from "./examples/reducer/index.jsx"
 import ImperativeDemo from "./examples/imparativeHandling"
 import Transitions from "./examples/transitions"
+import DefferedValue from "./examples/defferedValue/index.jsx";
 import './index.css'
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
     {
         path: '/transitions-demo',
         element: <Transitions/>
+    },
+    {
+        path: '/deffered-value-demo',
+        element: <DefferedValue />
     }
 ]);
 
